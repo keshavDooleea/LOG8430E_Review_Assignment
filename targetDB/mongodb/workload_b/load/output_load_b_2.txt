@@ -1,0 +1,25 @@
+mongo client connection created with mongodb://mongo1:30001,mongo2:30002,mongo3:30003,mongo4:30004,mongo5:30005,mongo6:30006/?replicaSet=my-replica-set
+[OVERALL], RunTime(ms), 21103
+[OVERALL], Throughput(ops/sec), 47.38662749372127
+[TOTAL_GCS_G1_Young_Generation], Count, 4
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 29
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 0.1374212197317917
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 4
+[TOTAL_GC_TIME], Time(ms), 29
+[TOTAL_GC_TIME_%], Time(%), 0.1374212197317917
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 7654.0
+[CLEANUP], MinLatency(us), 7652
+[CLEANUP], MaxLatency(us), 7655
+[CLEANUP], 95thPercentileLatency(us), 7655
+[CLEANUP], 99thPercentileLatency(us), 7655
+[INSERT], Operations, 1000
+[INSERT], AverageLatency(us), 20242.95
+[INSERT], MinLatency(us), 4972
+[INSERT], MaxLatency(us), 11010047
+[INSERT], 95thPercentileLatency(us), 14191
+[INSERT], 99thPercentileLatency(us), 23775
+[INSERT], Return=OK, 1000
