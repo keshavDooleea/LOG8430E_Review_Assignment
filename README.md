@@ -11,8 +11,9 @@
 2. ycsb-0.17.0: YCSB release file
 
 
-## script
+## Benchmarking Script instructions
 
+Navigate to targetDB folder.
 To run the script, three arguments must be passed:
 
 1. -d : refers to the database. Options are mongodb | redis | orientdb

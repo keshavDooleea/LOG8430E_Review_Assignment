@@ -5,6 +5,8 @@ validDatabases=(mongodb redis orientdb)
 workloadArray=(a b c d e f)
 jmp="\n\n\n-------------------- "
 
+echo -e ""
+
 # ---------------------- STEP 1: VALIDATE SHELL PARAMETERS ------------------------
 printParams() {
    echo ""
@@ -34,7 +36,7 @@ fi
 
 # check if database is valid
 if [[ ${validDatabases[*]} =~ (^|[[:space:]])"$db"($|[[:space:]]) ]]; then
-    echo -e "Benchmarking : $db";
+    echo -e "Database    : $db";
 else
     echo -e "Invalid database entered";
     printParams
@@ -42,14 +44,13 @@ fi
 
 # check if workload is correct
 if [[ ${workloadArray[*]} =~ (^|[[:space:]])"$workload"($|[[:space:]]) ]]; then
-    echo -e "Running      : Workload $workload";
+    echo -e "Workload    : $workload";
 else
     echo -e "Invalid workload";
     printParams
 fi
 
-echo -e "Execution    : $execution"
-
+echo -e "Execution # : $execution"
 
 # sets the YCSB arguments for individual databases
 if [ $db = ${validDatabases[0]} ]; then
