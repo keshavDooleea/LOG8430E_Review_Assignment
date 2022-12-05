@@ -89,7 +89,7 @@ echo -e $jmp "Loading data"
 ./bin/ycsb load $db -s -P workloads/workload"$workload" -p recordcount=1000 $ycsbArgs > ../targetDB/$db/workload_"$workload"/load/output_load_"$workload"_"$execution".txt
 
 # execute workload
-echo -e $jmp "Executing data"
+echo -e $jmp "Executing workload"
 ./bin/ycsb run $db -s -P workloads/workload"$workload" -p recordcount=1000 $ycsbArgs > ../targetDB/$db/workload_"$workload"/run/output_run_"$workload"_"$execution".txt
 
 # clean
