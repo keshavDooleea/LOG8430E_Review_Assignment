@@ -61,7 +61,7 @@ elif [ $db = ${validDatabases[1]} ]; then
     ycsbArgs="-p "redis.host=172.31.26.51" -p "redis.port=6379" -p "redis.cluster=true""
 else
     # orientdb
-    ycsbArgs=""
+    ycsbArgs="-p orientdb.url=plocal:localhost:2480 -p orientdb.password=admin"
 fi
 
 
