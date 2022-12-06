@@ -1,0 +1,25 @@
+/usr/bin/java  -classpath /home/ubuntu/github/LOG8430E_Review_Assignment/ycsb-0.17.0/conf:/home/ubuntu/github/LOG8430E_Review_Assignment/ycsb-0.17.0/lib/HdrHistogram-2.1.4.jar:/home/ubuntu/github/LOG8430E_Review_Assignment/ycsb-0.17.0/lib/core-0.17.0.jar:/home/ubuntu/github/LOG8430E_Review_Assignment/ycsb-0.17.0/lib/htrace-core4-4.1.0-incubating.jar:/home/ubuntu/github/LOG8430E_Review_Assignment/ycsb-0.17.0/lib/jackson-core-asl-1.9.4.jar:/home/ubuntu/github/LOG8430E_Review_Assignment/ycsb-0.17.0/lib/jackson-mapper-asl-1.9.4.jar:/home/ubuntu/github/LOG8430E_Review_Assignment/ycsb-0.17.0/redis-binding/lib/commons-pool2-2.4.2.jar:/home/ubuntu/github/LOG8430E_Review_Assignment/ycsb-0.17.0/redis-binding/lib/jedis-2.9.0.jar:/home/ubuntu/github/LOG8430E_Review_Assignment/ycsb-0.17.0/redis-binding/lib/redis-binding-0.17.0.jar site.ycsb.Client -load -db site.ycsb.db.RedisClient -s -P workloads/workloadf -p recordcount=1000 -p redis.host=172.31.26.51 -p redis.port=6379 -p redis.cluster=true
+[OVERALL], RunTime(ms), 834
+[OVERALL], Throughput(ops/sec), 1199.0407673860911
+[TOTAL_GCS_G1_Young_Generation], Count, 2
+[TOTAL_GC_TIME_G1_Young_Generation], Time(ms), 18
+[TOTAL_GC_TIME_%_G1_Young_Generation], Time(%), 2.158273381294964
+[TOTAL_GCS_G1_Old_Generation], Count, 0
+[TOTAL_GC_TIME_G1_Old_Generation], Time(ms), 0
+[TOTAL_GC_TIME_%_G1_Old_Generation], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 18
+[TOTAL_GC_TIME_%], Time(%), 2.158273381294964
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 1669.0
+[CLEANUP], MinLatency(us), 1669
+[CLEANUP], MaxLatency(us), 1669
+[CLEANUP], 95thPercentileLatency(us), 1669
+[CLEANUP], 99thPercentileLatency(us), 1669
+[INSERT], Operations, 1000
+[INSERT], AverageLatency(us), 452.88
+[INSERT], MinLatency(us), 194
+[INSERT], MaxLatency(us), 10831
+[INSERT], 95thPercentileLatency(us), 648
+[INSERT], 99thPercentileLatency(us), 3919
+[INSERT], Return=OK, 1000

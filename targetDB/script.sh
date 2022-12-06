@@ -58,7 +58,7 @@ if [ $db = ${validDatabases[0]} ]; then
     ycsbArgs="-p mongodb.upsert=true -p mongodb.url=mongodb://mongo1:30001,mongo2:30002,mongo3:30003,mongo4:30004,mongo5:30005,mongo6:30006/?replicaSet=my-replica-set"
 elif [ $db = ${validDatabases[1]} ]; then
     # redis
-    ycsbArgs=""
+    ycsbArgs="-p "redis.host=172.31.26.51" -p "redis.port=6379" -p "redis.cluster=true""
 else
     # orientdb
     ycsbArgs=""
@@ -86,11 +86,11 @@ cd ../../ycsb-0.17.0/
 
 # load data
 echo -e $jmp "Loading data"
-./bin/ycsb load $db -s -P workloads/workload"$workload" -p recordcount=1000 $ycsbArgs > ../targetDB/$db/workload_"$workload"/load/output_load_"$workload"_"$execution".txt
+./bin/ycsb.sh load $db -s -P workloads/workload"$workload" -p recordcount=1000 $ycsbArgs > ../targetDB/$db/workload_"$workload"/load/output_load_"$workload"_"$execution".txt
 
 # execute workload
 echo -e $jmp "Executing workload"
-./bin/ycsb run $db -s -P workloads/workload"$workload" -p recordcount=1000 $ycsbArgs > ../targetDB/$db/workload_"$workload"/run/output_run_"$workload"_"$execution".txt
+./bin/ycsb.sh run $db -s -P workloads/workload"$workload" -p recordcount=1000 $ycsbArgs > ../targetDB/$db/workload_"$workload"/run/output_run_"$workload"_"$execution".txt
 
 # clean
 echo -e $jmp "Cleaning"
