@@ -9,6 +9,8 @@
 
 2. ycsb-0.17.0: YCSB release directory
 
+3. Average_Benchmark_Results.xlsx: Excel file containing our average benchmark results and charts 
+
 
 ## Benchmarking Script instructions
 
